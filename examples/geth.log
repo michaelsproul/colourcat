@@ -1,0 +1,37 @@
+INFO [05-20|15:42:11] Starting peer-to-peer node               instance=Geth/v1.6.0-stable-facc47cb/darwin-amd64/go1.8.1
+INFO [05-20|15:42:11] Allocated cache and file handles         database=/Users/michael/Library/Ethereum/geth/lightchaindata cache=128 handles=1024
+INFO [05-20|15:42:11] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Engine: ethash}"
+INFO [05-20|15:42:11] Disk storage enabled for ethash caches   dir=/Users/michael/Library/Ethereum/geth/ethash count=3
+INFO [05-20|15:42:11] Disk storage enabled for ethash DAGs     dir=/Users/michael/.ethash                      count=2
+INFO [05-20|15:42:11] Added trusted CHT for mainnet 
+INFO [05-20|15:42:11] Loaded most recent local header          number=3736397 hash=0b1050…99f286 td=276519193839911508094
+INFO [05-20|15:42:11] Starting P2P networking 
+INFO [05-20|15:42:14] Mapped network port                      proto=udp extport=30303 intport=30303 interface="UPNP IGDv1-PPP1"
+WARN [05-20|15:42:14] Light client mode is an experimental feature 
+INFO [05-20|15:42:14] RLPx listener up                         self=enode://672acd8fe128565170e83337da4a3393bad64013457528b4dc122b41f5205f598658b79bef60d8a6f7061e54476dc711d582b20be922c7306d347d045ac4ce00@27.32.68.253:30303
+ERROR[05-20|15:42:14] Failed to retrieve current release       err="Missing trie node b43c12a2fd1598f3c854b30f5150e7baa8aaac3e10985b515962a7dfce6c3c39"
+INFO [05-20|15:42:14] IPC endpoint opened: /Users/michael/Library/Ethereum/geth.ipc 
+INFO [05-20|15:42:14] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-PPP1"
+INFO [05-20|15:42:14] Block synchronisation started 
+INFO [05-20|15:42:14] Imported new block headers               count=1 elapsed=15.443ms number=3736398 hash=fa2b08…60e31d ignored=0
+INFO [05-20|15:42:22] Imported new block headers               count=1 elapsed=5.544ms  number=3736399 hash=461ed8…abd891 ignored=0
+INFO [05-20|15:42:36] Imported new block headers               count=1 elapsed=5.349ms  number=3736400 hash=554389…e7199d ignored=0
+INFO [05-20|15:42:49] Imported new block headers               count=1 elapsed=5.611ms  number=3736401 hash=5fa571…037fad ignored=0
+INFO [05-20|15:42:58] Imported new block headers               count=1 elapsed=5.011ms  number=3736402 hash=ff883c…fee62a ignored=0
+INFO [05-20|15:43:03] Imported new block headers               count=1 elapsed=5.244ms  number=3736403 hash=2fab27…f33cf6 ignored=0
+INFO [05-20|15:43:13] Imported new block headers               count=1 elapsed=5.278ms  number=3736404 hash=fb7003…0f25ff ignored=0
+INFO [05-20|15:43:44] Imported new block headers               count=1 elapsed=5.457ms  number=3736405 hash=16b03c…17de2a ignored=0
+INFO [05-20|15:44:09] Imported new block headers               count=1 elapsed=5.129ms  number=3736406 hash=2b7e85…aa93a1 ignored=0
+INFO [05-20|15:44:22] Imported new block headers               count=1 elapsed=5.396ms  number=3736407 hash=ff3bf6…29b099 ignored=0
+INFO [05-20|15:44:40] Imported new block headers               count=1 elapsed=5.626ms  number=3736408 hash=50367f…1edd1f ignored=0
+INFO [05-20|15:44:45] Imported new block headers               count=1 elapsed=6.029ms  number=3736409 hash=1176b1…3218bb ignored=0
+INFO [05-20|15:44:49] Imported new block headers               count=1 elapsed=5.441ms  number=3736410 hash=eba963…d76eac ignored=0
+INFO [05-20|15:45:05] Imported new block headers               count=1 elapsed=5.413ms  number=3736411 hash=543e6e…f40cdd ignored=0
+INFO [05-20|15:45:08] Imported new block headers               count=1 elapsed=6.157ms  number=3736412 hash=26fad2…68e5bf ignored=0
+INFO [05-20|15:45:31] Got interrupt, shutting down... 
+INFO [05-20|15:45:31] IPC endpoint closed: /Users/michael/Library/Ethereum/geth.ipc 
+INFO [05-20|15:45:31] Blockchain manager stopped 
+INFO [05-20|15:45:31] Stopping light Ethereum protocol 
+INFO [05-20|15:45:31] Light Ethereum protocol stopped 
+INFO [05-20|15:45:31] Transaction pool stopped 
+INFO [05-20|15:45:31] Database closed                          database=/Users/michael/Library/Ethereum/geth/lightchaindata
