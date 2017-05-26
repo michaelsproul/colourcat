@@ -3,6 +3,7 @@ use rand::{thread_rng, Rng};
 
 const MIN_LUMINANCE: f64 = 90.0;
 const MIN_DISTANCE: f64 = 10.0;
+const MAX_ITERATIONS: usize = 50;
 
 pub type RGB = (u8, u8, u8);
 
@@ -17,7 +18,7 @@ pub fn luminance(red: u8, green: u8, blue: u8) -> f64 {
 }
 
 pub fn choose_colour(colours: &HashMap<String, RGB>) -> RGB {
-    'search: loop {
+    'search: for _ in 0..MAX_ITERATIONS {
         let (r1, g1, b1) = thread_rng().gen();
         if luminance(r1, g1, b1) < MIN_LUMINANCE {
             continue;
@@ -29,5 +30,6 @@ pub fn choose_colour(colours: &HashMap<String, RGB>) -> RGB {
         }
         return (r1, g1, b1);
     }
+    thread_rng().gen()
 }
 

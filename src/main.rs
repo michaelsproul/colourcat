@@ -1,6 +1,8 @@
 extern crate ansi_term;
 extern crate regex;
 extern crate rand;
+extern crate rustc_serialize;
+extern crate docopt;
 
 mod colour;
 
@@ -11,7 +13,7 @@ use regex::{Regex, Captures};
 use colour::choose_colour;
 
 fn main() {
-    let pattern = Regex::new(r"((\d|[a-f]){6}…(\d|[a-f]){6}|\d{3,})").unwrap();
+    let pattern = Regex::new(r"[[:xdigit:]]{6,}\.\.").unwrap();
     let stdin = io::stdin();
 
     let mut colours = HashMap::new();

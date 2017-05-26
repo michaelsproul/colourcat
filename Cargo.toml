@@ -7,3 +7,5 @@ authors = ["Michael Sproul <micsproul@gmail.com>"]
 ansi_term = "0.9"
 regex = "0.2"
 rand = "0.3"
+rustc-serialize = "*"
+docopt = "0.7"
