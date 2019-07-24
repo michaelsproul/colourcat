@@ -1,8 +1,7 @@
-use std::collections::HashMap;
-use rand::{thread_rng, Rng};
+use metrohash::MetroHash64;
+use std::hash::Hasher;
 
-const MIN_LUMINANCE: f64 = 90.0;
-const MIN_DISTANCE: f64 = 10.0;
+const MIN_LUMINANCE: f64 = 100.0;
 
 pub type RGB = (u8, u8, u8);
 
@@ -16,18 +15,36 @@ pub fn luminance(red: u8, green: u8, blue: u8) -> f64 {
     colour_dist((red, green, blue), (0, 0, 0))
 }
 
-pub fn choose_colour(colours: &HashMap<String, RGB>) -> RGB {
-    'search: loop {
-        let (r1, g1, b1) = thread_rng().gen();
-        if luminance(r1, g1, b1) < MIN_LUMINANCE {
-            continue;
-        }
-        for &(r2, g2, b2) in colours.values() {
-            if colour_dist((r1, g1, b1), (r2, g2, b2)) < MIN_DISTANCE {
-                continue 'search;
+pub fn hash_colour(string: &str) -> RGB {
+    let mut hasher = MetroHash64::new();
+    hasher.write(string.as_bytes());
+    let hash = hasher.finish();
+
+    let (mut red, mut green, mut blue) = (hash as u8, (hash >> 8) as u8, (hash >> 16) as u8);
+
+    let mut i = 24;
+    let k = 1;
+
+    while luminance(red, green, blue) < MIN_LUMINANCE {
+        let rand_value = (hash >> i) & 0b11;
+        match rand_value {
+            0 => {
+                red += k;
+            }
+            1 => {
+                green += k;
+            }
+            2 => {
+                blue += k;
+            }
+            _ => {
+                red += 1;
+                green += 1;
+                blue += 1;
             }
         }
-        return (r1, g1, b1);
+        i = (i + 1) % 64;
     }
-}
 
+    (red, green, blue)
+}

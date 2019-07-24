@@ -2,8 +2,9 @@
 name = "colourcat"
 version = "0.1.0"
 authors = ["Michael Sproul <micsproul@gmail.com>"]
+edition = "2018"
 
 [dependencies]
 ansi_term = "0.9"
-regex = "0.2"
-rand = "0.3"
+regex = "1.2.0"
+metrohash = "1.0.6"
