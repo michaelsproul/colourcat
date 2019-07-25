@@ -9,3 +9,5 @@ To install, clone and then:
 ```
 cargo install --path . --force
 ```
+
+![Screenshot](screenshot.png)
