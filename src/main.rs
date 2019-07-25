@@ -7,7 +7,7 @@ use std::io::{self, BufRead};
 
 fn main() {
     // TODO: make the regex adjustable from the CLI
-    let pattern = Regex::new(r"((\d|[a-f]){6}(…|\.)?(\d|[a-f]){6,}|\d{3,})").unwrap();
+    let pattern = Regex::new(r"((0x)?(\d|[a-fA-F]){6}(…|\.)?(\d|[a-fA-F]){6,}|\d{3,})").unwrap();
     let stdin = io::stdin();
 
     for line in stdin.lock().lines() {
